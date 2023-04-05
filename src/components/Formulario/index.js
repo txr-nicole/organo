@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { Botao } from "../Botao";
 import { CampoTexto } from "../CampoTexto";
 import { ListaSuspensa } from "../ListaSuspensa";
 import "./Formulario.css";
-
 
 export const Formulario = () => {
   const times = [
@@ -13,24 +13,50 @@ export const Formulario = () => {
     "UX e Design",
     "Mobile",
     "Inovação e Gestão",
-    ]
-  
+  ];
+
+  const [nome, setNome] = useState("");
+  const [cargo, setCargo] = useState("");
+  const [imagem, setImagem] = useState("");
+  const [time, setTime] = useState("");
+
   const aoSalvar = (e) => {
     e.preventDefault();
-    console.log("form foi submitado")
-  }
-  
+    console.log("form foi submitado =>", nome, cargo, imagem, time);
+  };
+
   return (
     <section className="formulario">
       <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
-        <CampoTexto obrigatorio={true} label="Cargo" placeholder="Digite seu cargo" />
-        <CampoTexto  label="Imagem" placeholder="Digite o endereço da imagem" />
-        <ListaSuspensa obrigatorio={true} label="Time"  itens={times}/>
-        <Botao>
-          Criar card
-        </Botao>
+        <CampoTexto
+          valor={nome}
+          aoAlterado={setNome}
+          obrigatorio={true}
+          label="Nome"
+          placeholder="Digite seu nome"
+        />
+        <CampoTexto
+          value={cargo}
+          aoAlterado={setCargo}
+          obrigatorio={true}
+          label="Cargo"
+          placeholder="Digite seu cargo"
+        />
+        <CampoTexto
+          value={imagem}
+          aoAlterado={setImagem}
+          label="Imagem"
+          placeholder="Digite o endereço da imagem"
+        />
+        <ListaSuspensa
+          valor={time}
+          aoAlterado={setTime}
+          obrigatorio={true}
+          label="Time"
+          itens={times}
+        />
+        <Botao>Criar card</Botao>
       </form>
     </section>
   );
