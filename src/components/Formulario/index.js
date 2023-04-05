@@ -4,7 +4,7 @@ import { CampoTexto } from "../CampoTexto";
 import { ListaSuspensa } from "../ListaSuspensa";
 import "./Formulario.css";
 
-export const Formulario = () => {
+export const Formulario = (props) => {
   const times = [
     "Programação",
     "Front-End",
@@ -22,7 +22,12 @@ export const Formulario = () => {
 
   const aoSalvar = (e) => {
     e.preventDefault();
-    console.log("form foi submitado =>", nome, cargo, imagem, time);
+    props.aoColaboradorCadastrado({
+      nome,
+      cargo,
+      imagem,
+      time,
+    });
   };
 
   return (
