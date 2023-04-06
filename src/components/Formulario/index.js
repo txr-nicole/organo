@@ -18,10 +18,10 @@ export const Formulario = (props) => {
       imagem,
       time,
     });
+    setNome("");
     setCargo("");
     setImagem("");
-    setNome("");
-    setTime("");
+    setTime("Programação");
   };
 
   return (
@@ -36,14 +36,14 @@ export const Formulario = (props) => {
           placeholder="Digite seu nome"
         />
         <CampoTexto
-          value={cargo}
+          valor={cargo}
           aoAlterado={setCargo}
           obrigatorio={true}
           label="Cargo"
           placeholder="Digite seu cargo"
         />
         <CampoTexto
-          value={imagem}
+          valor={imagem}
           aoAlterado={setImagem}
           label="Imagem"
           placeholder="Digite o endereço da imagem"
