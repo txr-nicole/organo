@@ -1,4 +1,4 @@
-.rodape{
+.footer{
     background-color: #6278f7;
     background-image: url("../../../public/imagens/fundo.png");
     background-position: center;
@@ -20,7 +20,7 @@
 }
 
 @media (max-width:768px){
-    .rodape{
+    .footer{
         flex-direction: column;
         gap: 10px;
     }

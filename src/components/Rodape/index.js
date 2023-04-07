@@ -2,7 +2,7 @@ import "./Rodape.css";
 
 export const Rodape = ()=> {
     return (
-      <footer className="rodape">
+      <footer className="footer">
         <div className="redes">
           <a href="https://github.com/txr-nicole">
             <img src="./imagens/github.png" alt="" />
