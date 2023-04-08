@@ -15,5 +15,9 @@ Um projeto de configuração da organização de uma empresa, divididos por time
   <br/>
   Depois, acesse http://localhost:3000/ no seu navegador.
   
+  ### :computer: Imagens do projeto:
+   <img src="./public/imagens/organoCima.png" width="800">
+   <img src="./public/imagens/organoCards.png" width="800">
+  
   
 
